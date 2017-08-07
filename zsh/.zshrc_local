@@ -3,6 +3,7 @@ t()
 {
   tmux new-session -s $1
 }
+
 t2c ()
 {
   echo $1 | xclip -sel clip
@@ -25,14 +26,23 @@ genpasswd()
     tr -dc A-Za-z0-9_ < /dev/urandom | head -c ${l} | xargs
 }
 
+load_tmux()
+{
+  local nl=$(uname)
+  if [[ "${nl}" == "Darwin" ]]; then
+    source ~/.tmux-osx.conf
+  fi
+}
+
 # vars
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 export EDITOR='vim'
 export GOPATH="$HOME/go"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-export KERN_DIR=/usr/src/kernels/`uname -r`
 export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export KERN_DIR=/usr/src/kernels/`uname -r`
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}"'
 export NVM_DIR="/home/alacaba/.nvm"
 
