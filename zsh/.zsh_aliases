@@ -2,8 +2,6 @@ alias be='bundle exec'
 alias agrep='ack-grep'
 alias xcopy='xclip -sel clip'
 alias tcopy='tmux show-buffer | xcopy'
-alias vim=vimx
-alias vi=vimx
 alias z=zeus
 alias py=python
 
