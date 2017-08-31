@@ -3,16 +3,10 @@ call plug#begin('~/.vim/plugged')
 " Plugins
 
 " Rice
-Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'ap/vim-buftabline'
 Plug 'airblade/vim-gitgutter'
 Plug 'flazz/vim-colorschemes'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'gorodinskiy/vim-coloresque'
-Plug 'altercation/vim-colors-solarized'
-
-" Utils
-Plug 'amirh/HTML-AutoCloseTag'
 Plug 'othree/html5.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'kien/ctrlp.vim'
@@ -27,6 +21,7 @@ Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'freitass/todo.txt-vim'
+Plug 'alvan/vim-closetag'
 
 " Syntax
 Plug 'tpope/vim-rails'
@@ -35,7 +30,6 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
 Plug 'slim-template/vim-slim'
-Plug 'paranoida/vim-airlineish'
 Plug 'leafgarland/typescript-vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'mxw/vim-jsx'
@@ -48,29 +42,10 @@ Plug 'tomlion/vim-solidity'
 
 call plug#end()
 
+
 filetype plugin indent on
 
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-  let g:airline#extensions#tabline#left_sep = ''
-  let g:airline#extensions#tabline#left_alt_sep = ''
-endif
-
 let mapleader="\<Tab>"
-let g:airline#extensions#tabline#enabled=1
-"let g:airline#extensions#bufferline#enabled=1
-
-function! AirlineInit()
-  let g:airline_section_a = airline#section#create(['mode', ' ', 'branch'])
-  let g:airline_section_b = airline#section#create_left(['ffenc', 'hunks'])
-endfunction
-
-let g:airline_theme='raven'
-"let g:airline_theme='sol'
-set statusline=0
-set laststatus=0
-"emett
-let g:user_emmet_install_global = 0
 
 syntax on
 syntax enable
@@ -116,24 +91,6 @@ set background=dark
 set noerrorbells visualbell t_vb=
 set clipboard=unnamedplus
 
-"netrw
-"let g:netrw_banner = 0
-"let g:netrw_liststyle = 3
-"let g:netrw_browse_split = 4
-"let g:netrw_altv = 1
-"let g:netrw_winsize = 15
-"let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
-
-if has('statusline')
-  set laststatus=2
-  set statusline=%<%f\ " Filename
-  set statusline+=%w%h%m%r " Options
-  set statusline+=%{fugitive#statusline()} " Git Hotness
-  set statusline+=\ [%{&ff}/%Y] " Filetype
-  set statusline+=\ [%{getcwd()}] " Current dir
-  set statusline+=%=%-14.(%l,%c%V%)\ %p%% " Right aligned file nav inf
-endif
-
 " Mappings
 
 nnoremap <C-X>     <Esc>:bd!<CR>
@@ -168,6 +125,7 @@ vnoremap < <gv
 vnoremap > >gv
 vnoremap . :normal .<CR>
 map <Leader> <Plugin>(easymotion-prefix)
+nmap <C-Q> "+gP
 
 if has("autocmd")
   augroup inivisible_chars
@@ -191,18 +149,15 @@ if has("autocmd")
 
   autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
   autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
-  autocmd VimEnter * call AirlineInit()
   autocmd GUIEnter * set visualbell t_vb=
 endif
 
 highlight LineNr ctermfg=black
 
-let g:tmuxline_preset = 'nightly_fox'
 let g:typescript_compiler_options = '-sourcemap'
 let g:indent_guides_auto_colors = 0
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
-"let g:airline_powerline_fonts = 1
 
 hi clear SignColumn
 hi GitGutterAdd ctermfg=green
@@ -214,10 +169,7 @@ hi NonText ctermfg=magenta
 hi CursorLine term=bold cterm=bold guibg=Grey40
 hi VertSplit ctermfg=red ctermbg=NONE cterm=NONE
 
-nmap <C-Q> "+gP
-
 set t_Co=16
-set laststatus=0
-"let g:hybrid_use_Xresources = 1
-"let g:hybrid_reduced_contrast = 1
-"colo hybrid
+set statusline=0
+set ls=0
+
