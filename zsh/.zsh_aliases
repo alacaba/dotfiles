@@ -4,6 +4,7 @@ alias xcopy='xclip -sel clip'
 alias tcopy='tmux show-buffer | xcopy'
 alias z=zeus
 alias py=python
+alias vim=/usr/local/bin/vim
 
 # ethereum
 alias local_geth='geth --fast --rpc --rpcapi web3,eth,personal --cache=512 --testnet console'
