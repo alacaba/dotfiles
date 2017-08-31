@@ -136,7 +136,7 @@ set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic white
 set mouse=a
 set mousehide
 set background=dark
-set t_Co=16
+set noerrorbells visualbell t_vb=
 set noerrorbells visualbell t_vb=
 
 if has('statusline')
@@ -223,11 +223,6 @@ set guioptions-=L
 set background=dark
 set linespace=2
 
-set t_Co=256
-set noerrorbells visualbell t_vb=
-colo hybrid
-"set guifont=Inconsolata\ for\ Powerline\ Regular\ 13
-set guifont=Consolas\ Bold\ 11
 
 colo hybrid
 
@@ -244,3 +239,10 @@ hi VertSplit ctermfg=red ctermbg=NONE cterm=NONE
 nmap <C-Q> "+gP
 nnoremap y "+y
 vnoremap y "+y
+
+"set t_Co=256
+"let g:hybrid_use_Xresources = 1
+"let g:hybrid_reduced_contrast = 1
+colo hybrid
+set guifont=Consolas\ 11
+set laststatus=0

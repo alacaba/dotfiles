@@ -67,7 +67,8 @@ endfunction
 
 let g:airline_theme='raven'
 "let g:airline_theme='sol'
-
+set statusline=0
+set laststatus=0
 "emett
 let g:user_emmet_install_global = 0
 
@@ -112,9 +113,16 @@ set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic white
 set mouse=a
 set mousehide
 set background=dark
-set t_Co=16
 set noerrorbells visualbell t_vb=
 set clipboard=unnamedplus
+
+"netrw
+"let g:netrw_banner = 0
+"let g:netrw_liststyle = 3
+"let g:netrw_browse_split = 4
+"let g:netrw_altv = 1
+"let g:netrw_winsize = 15
+"let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 
 if has('statusline')
   set laststatus=2
@@ -163,8 +171,8 @@ map <Leader> <Plugin>(easymotion-prefix)
 
 if has("autocmd")
   augroup inivisible_chars
-  au!
-  autocmd BufWritePre * :%s/\s\+$//e
+    au!
+    autocmd BufWritePre * :%s/\s\+$//e
   augroup end
 
   autocmd BufRead,BufNewFile *.html,*.erb               set filetype=html.eruby
@@ -207,3 +215,9 @@ hi CursorLine term=bold cterm=bold guibg=Grey40
 hi VertSplit ctermfg=red ctermbg=NONE cterm=NONE
 
 nmap <C-Q> "+gP
+
+set t_Co=16
+set laststatus=0
+"let g:hybrid_use_Xresources = 1
+"let g:hybrid_reduced_contrast = 1
+"colo hybrid

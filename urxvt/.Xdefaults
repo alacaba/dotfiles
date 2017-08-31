@@ -1,17 +1,10 @@
 ! Fonts
-Xft.dpi:        96
-Xft.antialias:  true
-Xft.rgba:       none
-!Xft.hinting:    true
-!Xft.autohint:   true
-!Xft.hintstyle:  hintslight
-
-URxvt*letterSpace: -1
-URxvt*font: xft:consolas:bold:pixelsize=14
+URxvt*letterSpace: -1.9
+URxvt*lineSpace: -2
+URxvt*font: xft:consolas:pixelsize=14
 URxvt*cursorBlink: true
 URxvt*scrollBar: false
 URxvt*iso14755: False
-URxvt*iconFile: /usr/share/icons/Numix-Circle/scalable/apps/xterm-color.svg
 Urxvt.termName: rxvt-unicode
 !URxvt*keysym.Shift-Control-V: perl:clipboard:paste
 
@@ -19,16 +12,17 @@ Urxvt.termName: rxvt-unicode
 URxvt*perl-ext-common : default,clipboard,matcher,remote-clipboard
 URxvt*url-launcher    : xdg-open
 URxvt*matcher.button  : 1
-
-URxvt*foreground: gray
-URxvt*background: #1D1F21
-!urxvt*background: rgba:0000/0000/0200/c800
 urxvt*visualBell:  false
+
+! Transparency
+!urxvt*background: rgba:0000/0000/0200/c800
 
 ! COLORS based on tlh
 ! Look up for more colors:
 ! http://xcolors.net
 
+*foreground: gray
+*background: #1D1F21
 !black
 *color0:  #251f1f
 *color8:  #5e5e5e
@@ -36,8 +30,6 @@ urxvt*visualBell:  false
 *color1:  #eb4509
 *color9:  #eb4509
 !green
-!*color2:  #94e76b
-!*color10: #95e76b
 *color2:   #60FF60
 *color10:  #70FF70
 !yellow
@@ -55,3 +47,4 @@ urxvt*visualBell:  false
 !white
 *color7:  #efefef
 *color15: #efefef
+

@@ -1,81 +1,46 @@
-alias tl='tmux list-sessions'
-alias gg='git grep --break --heading -n'
 alias be='bundle exec'
-alias migrate='r_migrate test; r_migrate development'
-alias rollback='r_rollback test; r_rollback development'
-alias define='/home/alacaba/Scripts/define/define.rb'
-alias btp-connect='ssh tmux@192.168.43.212'
-alias bo='bundle open'
-alias rserver='be rails s -b 127.0.0.1'
 alias agrep='ack-grep'
-alias gs='git status'
-alias pairprog='ssh tmux@192.168.43.212'
-alias rails3='rails _3.2.19_'
-alias rails30='rails _3.0_'
-alias procs='ps -ef'
-alias update-ruby-build='cd /home/a655321/.rbenv/plugins/ruby-build && git pull'
-alias copy-sshkeys='cat ~/.ssh/id_rsa.pub | xclip -sel clip'
-alias desktop-connect='ssh alacaba@192.168.1.8'
-alias mount-desktop='sshfs alacaba@192.168.1.8:/mnt ~/Local\ Desktop'
-alias unmount-desktop='sudo umount ~/muh\ desktop'
-alias copy-tbpass='cat ~/.tbpass.txt | xclip -sel clip'
-alias @sci='cd ~/Workspace/@sci'
-alias @saunders='cd ~/Workspace/@saunders'
-alias rebit1='ssh -i ~/.ssh/sci-alty.pem ubuntu@52.77.231.121'
-alias rebit2='ssh -i ~/.ssh/sci-alty.pem ubuntu@ec2-54-169-71-169.ap-southeast-1.compute.amazonaws.com'
-alias rebit-staging='ssh ubuntu@http://ec2-54-255-175-65.ap-southeast-1.compute.amazonaws.com:3000'
-alias vts='ssh root@139.162.35.204'
-alias vts-staging='ssh root@139.162.50.137'
-alias em-production='ssh deployer@128.199.81.203'
-alias switcher-value='gsettings set org.gnome.shell.app-switcher current-workspace-only true'
-alias chain-connect='ssh -i ~/.ssh/sci-alty.pem ubuntu@52.77.241.228'
+alias xcopy='xclip -sel clip'
+alias tcopy='tmux show-buffer | xcopy'
+alias vim=vimx
+alias vi=vimx
+alias z=zeus
+alias py=python
+
+# ethereum
+alias local_geth='geth --fast --rpc --rpcapi web3,eth,personal --cache=512 --testnet console'
 
 # project shortcuts
-alias @sci='cd ~/Workspace/@sci'
-alias @ico='cd ~/Workspace/@ico'
-alias @saunders='cd ~/Workspace/@saunders'
-alias @archives='cd ~/Workspace/@archives'
-alias @code='cd ~/Code'
-
-# todo.txt
-# alias todo='vim ~/.local/share/todo.txt/todo.txt'
+alias @sci='cd $HOME/Workspace/@sci'
+alias @ico='cd $HOME/Workspace/@ico'
+alias @saunders='cd $HOME/Workspace/@saunders'
+alias @archives='cd $HOME/Workspace/@archives'
+alias @code='cd $HOME/Code'
+alias rebit1='ssh -i ~/.ssh/sci-alty.pem ubuntu@52.77.231.121'
+alias rebit2='ssh -i ~/.ssh/sci-alty.pem ubuntu@ec2-54-169-71-169.ap-southeast-1.compute.amazonaws.com'
+alias alon='ssh ubuntu@54.254.169.220'
 
 # Tmux Aliases
-#alias t='tmux new-session'
 alias ta='tmux attach-session -t'
 alias tl='tmux list-sessions'
 alias tx='tmux kill-session -t'
 alias reload-tmux='tmux source-file ~/.tmux.conf'
-alias dk='docker'
 
 # swarm
 alias node0='ssh -i ~/.ssh/sci-alty.pem ubuntu@52.77.101.240'
 alias node1='ssh -i ~/.ssh/sci-alty.pem ubuntu@52.74.202.29'
 alias node2='ssh -i ~/.ssh/sci-alty.pem ubuntu@54.169.l4.73'
-
 alias consul-tunnel="ssh -L 3100:127.0.0.1:8500 ubuntu@52.77.101.240 -N"
 alias rabbitmq-tunnel="ssh -L 3200:127.0.0.1:15672 ubuntu@52.77.101.240 -N"
 alias vis-tunnel="ssh -L 3300:127.0.0.1:8080 ubuntu@52.77.101.240 -N"
 
-alias em-main='ssh root@188.166.218.252'
-alias xcopy='xclip -sel clip'
-
-alias activate='source ./bin/activate'
-alias venv='virtualenv'
-alias tcopy='tmux show-buffer | xcopy'
-alias vim=vimx
-alias vi=vimx
-alias z=zeus
-
 # git
 
 alias g='git'
-
 alias ga='git add'
 alias gaa='git add --all'
 alias gapa='git add --patch'
 alias gau='git add --update'
-
 alias gb='git branch'
 alias gba='git branch -a'
 alias gbd='git branch -d'
@@ -88,7 +53,6 @@ alias gbsb='git bisect bad'
 alias gbsg='git bisect good'
 alias gbsr='git bisect reset'
 alias gbss='git bisect start'
-
 alias gc='git commit -v'
 alias gc!='git commit -v --amend'
 alias gcn!='git commit -v --no-edit --amend'
@@ -112,10 +76,12 @@ alias gcp='git cherry-pick'
 alias gcpa='git cherry-pick --abort'
 alias gcpc='git cherry-pick --continue'
 alias gcs='git commit -S'
-
 alias gd='git diff'
 alias gdca='git diff --cached'
 alias gdct='git describe --tags `git rev-list --tags --max-count=1`'
 alias gdt='git diff-tree --no-commit-id --name-only -r'
 alias gdw='git diff --word-diff'
 alias grbi='git rebase -i'
+alias gg='git grep --break --heading -n'
+alias gs='git status'
+
