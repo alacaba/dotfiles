@@ -199,5 +199,5 @@ nnoremap y "+y
 vnoremap y "+y
 
 colo hybrid
-set guifont=Consolas\ 11
+set guifont=Consolas:h12
 set laststatus=0
