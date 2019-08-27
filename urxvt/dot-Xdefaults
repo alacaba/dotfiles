@@ -6,10 +6,10 @@ Xft*dpi:               96
 Xft*antialias:         true
 Xft*rgba:              rgb
 Xft*lcdfilter:         lcddefault
-URxvt.font:            xft:inconsolata:pixelsize=13, xft:dejavu sans mono:pixelsize=13
-URxvt.boldFont:        xft:inconsolata:pixelsize=13, xft:dejavu sans mono:pixelsize=13
-URxvt.italicFont:      xft:inconsolata:pixelsize=13, xft:dejavu sans mono:pixelsize=13
-URxvt.bolditalicFont:  xft:inconsolata:pixelsize=13, xft:dejavu sans mono:pixelsize=13
+URxvt.font:            xft:inconsolata:pixelsize=14, xft:dejavu sans mono:pixelsize=14
+URxvt.boldFont:        xft:inconsolata:pixelsize=14, xft:dejavu sans mono:pixelsize=14
+URxvt.italicFont:      xft:inconsolata:pixelsize=14, xft:dejavu sans mono:pixelsize=14
+URxvt.bolditalicFont:  xft:inconsolata:pixelsize=14, xft:dejavu sans mono:pixelsize=14
 
 URxvt.cursorBlink:     true
 URxvt.scrollBar:       false

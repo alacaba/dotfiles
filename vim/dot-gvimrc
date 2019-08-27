@@ -117,7 +117,7 @@ set guioptions-=r
 set guioptions-=L
 set background=dark
 set linespace=2
-set guifont=Inconsolata\ 9
+set guifont=Inconsolata\ 10
 set laststatus=0
 
 " Mappings
