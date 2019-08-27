@@ -117,7 +117,7 @@ set guioptions-=r
 set guioptions-=L
 set background=dark
 set linespace=2
-set guifont=Fira\ Code\ Retina\ 9
+set guifont=Inconsolata\ 9
 set laststatus=0
 
 " Mappings

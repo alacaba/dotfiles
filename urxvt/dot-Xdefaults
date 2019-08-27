@@ -1,57 +1,64 @@
 ! Fonts
 URxvt.letterSpace: -1
-URxvt.lineSpace: -1
-URxvt.font: xft:fira code:retina:pixelsize=12
-URxvt.boldFont: xft:fira code:retina:pixelsize=12
+URxvt.lineSpace: 1
 
-URxvt.cursorBlink: true
-URxvt.scrollBar: false
-URxvt.iso14755: False
-URxvt.termName: rxvt-unicode
+Xft*dpi:               96
+Xft*antialias:         true
+Xft*rgba:              rgb
+Xft*lcdfilter:         lcddefault
+URxvt.font:            xft:inconsolata:pixelsize=13, xft:dejavu sans mono:pixelsize=13
+URxvt.boldFont:        xft:inconsolata:pixelsize=13, xft:dejavu sans mono:pixelsize=13
+URxvt.italicFont:      xft:inconsolata:pixelsize=13, xft:dejavu sans mono:pixelsize=13
+URxvt.bolditalicFont:  xft:inconsolata:pixelsize=13, xft:dejavu sans mono:pixelsize=13
+
+URxvt.cursorBlink:     true
+URxvt.scrollBar:       false
+URxvt.iso14755:        False
+URxvt.termName:        rxvt-unicode
 !URxvt*keysym.Shift-Control-V: perl:clipboard:paste
 
 ! perl exts
-URxvt.perl-ext-common : default,clipboard,matcher,remote-clipboard,fullscreen
-URxvt.url-launcher    : xdg-open
-URxvt.matcher.button  : 1
-URxvt.visualBell:  false
-URxvt.keysym.F11: perl:fullscreen:switch
+URxvt.perl-ext-common: default,clipboard,matcher,remote-clipboard,fullscreen
+URxvt.url-launcher:    xdg-open
+URxvt.matcher.button:  1
+URxvt.visualBell:      false
+URxvt.keysym.F11:      perl:fullscreen:switch
 
 ! Transparency
 !URxvt.background: rgba:0000/0000/0200/c800
-URxvt.background: [90]#000000
-URxvt.depth: 32!
+URxvt.background:      [90]#000000
+URxvt.depth:           32!
 !URxvt.background: #1d1f21
 
 ! COLORS based on tlh
 ! Look up for more colors:
 ! http://xcolors.net
 
-*foreground: #B6B6B6
+*foreground:           #B6B6B6
 !*background: #1D1F21
 
 !black
-*color0:  #251f1f
-*color8:  #5e5e5e
+*color0:               #251f1f
+*color8:               #5e5e5e
 !red
-*color1:  #eb4509
-*color9:  #eb4509
+*color1:               #eb4509
+*color9:               #eb4509
 !green
-*color2:   #60FF60
-*color10:  #70FF70
+*color2:               #60FF60
+*color10:              #70FF70
 !yellow
-*color3:  #ffac18
-*color11: #ffac18
+*color3:               #ffac18
+*color11:              #ffac18
 !blue
-*color4:  #46aede
-*color12: #46aede
+*color4:               #46aede
+*color12:              #46aede
 !magenta
-*color5:  #e32c57
-*color13: #e32c57
+*color5:               #e32c57
+*color13:              #e32c57
 !cyan
-*color6:  #d6dbac
-*color14: #d6dbac
+*color6:               #d6dbac
+*color14:              #d6dbac
 !white
-*color7:  #efefef
-*color15:  #efefef
+*color7:               #efefef
+*color15:              #efefef
 
